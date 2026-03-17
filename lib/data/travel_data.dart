@@ -52,7 +52,7 @@ const List<TravelDestination> travelDestinations = <TravelDestination>[
     category: 'Entertainment',
     description:
         'Attend concerts, basketball events, and live entertainment at one of East Africa\'s most iconic venues.',
-    imageAsset: 'lib/pictures/Kigali-City.webp',
+    imageAsset: 'lib/pictures/bkarena.jpg',
     pricePerNight: 120,
     rating: 4.8,
     highlights: <String>['Live shows', 'Modern venue', 'Sports events', 'Food court'],
@@ -64,7 +64,7 @@ const List<TravelDestination> travelDestinations = <TravelDestination>[
     category: 'Hotel',
     description:
         'Enjoy a premium hotel stay with resort-style amenities, elegant dining, and easy access to top city attractions.',
-    imageAsset: 'lib/pictures/Kigali-City.webp',
+    imageAsset: 'lib/pictures/Kigali-Serena-Hotel.jpg',
     pricePerNight: 210,
     rating: 4.9,
     highlights: <String>['Pool access', 'Luxury rooms', 'Spa service', 'Fine dining'],
