@@ -31,6 +31,14 @@ class _BookingScreenState extends State<BookingScreen> {
   @override
   Widget build(BuildContext context) {
     final double total = widget.destination.pricePerNight * _nights;
+    final double screenWidth = MediaQuery.sizeOf(context).width;
+    final double horizontalPadding = screenWidth >= 1200
+      ? screenWidth * 0.2
+      : screenWidth >= 900
+        ? 78
+        : screenWidth >= 700
+          ? 42
+          : 18;
 
     return Scaffold(
       appBar: AppBar(
@@ -47,7 +55,7 @@ class _BookingScreenState extends State<BookingScreen> {
         child: SafeArea(
           top: false,
           child: SingleChildScrollView(
-            padding: const EdgeInsets.fromLTRB(18, 12, 18, 24),
+            padding: EdgeInsets.fromLTRB(horizontalPadding, 12, horizontalPadding, 24),
             child: Form(
               key: _formKey,
               child: Column(

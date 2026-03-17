@@ -15,6 +15,15 @@ class DetailScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final double screenWidth = MediaQuery.sizeOf(context).width;
+    final double horizontalPadding = screenWidth >= 1200
+        ? screenWidth * 0.18
+        : screenWidth >= 900
+            ? 64
+            : screenWidth >= 700
+                ? 36
+                : 18;
+
     return Scaffold(
       body: SingleChildScrollView(
         child: Column(
@@ -64,8 +73,8 @@ class DetailScreen extends StatelessWidget {
                   ),
                 ),
                 Positioned(
-                  left: 18,
-                  right: 18,
+                  left: horizontalPadding,
+                  right: horizontalPadding,
                   bottom: 20,
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
@@ -111,7 +120,7 @@ class DetailScreen extends StatelessWidget {
               ],
             ),
             Padding(
-              padding: const EdgeInsets.fromLTRB(18, 18, 18, 24),
+              padding: EdgeInsets.fromLTRB(horizontalPadding, 18, horizontalPadding, 24),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: <Widget>[
